@@ -41,6 +41,7 @@ __attribute__((weak)) bool oled_task_user(void) {
         oledkit_render_info_user();
     } else {
         oledkit_render_logo_user();
+    //    oledkit_render_logo_user();
     }
     return true;
 }

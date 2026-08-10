@@ -256,7 +256,13 @@ void auto_mouse_keyevent(bool pressed) {
     if (pressed) {
         auto_mouse_context.status.mouse_key_tracker++;
     } else {
-        auto_mouse_context.status.mouse_key_tracker--;
+        // mouse_key_tracker が0より大きい場合のみデクリメント
+        if (auto_mouse_context.status.mouse_key_tracker > 0) {
+            auto_mouse_context.status.mouse_key_tracker--;
+        } else {
+            // デバッグログを追加して異常を検出
+            //dprintf("Warning: mouse_key_tracker is already zero when trying to decrement.\n");
+        }
     }
     auto_mouse_context.timer.delay = 0;
 }
