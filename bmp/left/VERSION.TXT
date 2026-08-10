@@ -1,0 +1,4 @@
+API version: 17
+Config version: 3
+Build from: v1.2.0-0-g71adeee5f9*
+Build Target: keyball_keyball39_bmp
