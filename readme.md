@@ -17,3 +17,13 @@ configs (left = SPLIT_SLAVE, right = SPLIT_MASTER).
 
 Dongle side: [qmk_firmware-bmp-dongle](https://github.com/tennis-n1010/qmk_firmware-bmp-dongle)
 — consumer and system keys are disabled there.
+
+## Device files
+
+`bmp/` holds what the BLE Micro Pro boards expose over USB mass storage, taken
+from the running keyboards. `CONFIG.BIN`, `DEFAULT.BIN` and `VIALJSON.BIN` can be
+regenerated from the sources in this repo; `EEPROM.BIN` cannot — it carries the
+keymap and settings written through Vial at runtime.
+
+`VERSION.TXT` records the firmware they were built from: `v1.2.0-0-g71adeee5f9`,
+the commit this branch is based on.
